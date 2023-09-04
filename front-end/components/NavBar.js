@@ -1,5 +1,7 @@
 import * as React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+
+// Import Text
 import {
   useFonts,
   Quicksand_300Light,
@@ -9,10 +11,9 @@ import {
   Quicksand_700Bold,
 } from '@expo-google-fonts/quicksand';
 
-// import { createNativeStackNavigator } from '@react-navigation/native-stack';
-// import { NavigationContainer } from '@react-navigation/native';
+// Import Screens
 import HomeScreen from '../screens/Home';
-import AccountScreen from '../screens/Account';
+import ProfileScreen from '../screens/Profile';
 
 
 const Tab = createBottomTabNavigator();
@@ -57,7 +58,7 @@ function TabNavigator() {
           />
           <Tab.Screen
             name="Account" 
-            component={AccountScreen}
+            component={ProfileScreen}
             options={{
               headerShown:false,
               tabBarLabel:"Profile",

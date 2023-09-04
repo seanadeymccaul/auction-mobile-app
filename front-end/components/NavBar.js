@@ -47,7 +47,7 @@ function TabNavigator() {
             options={{
               headerShown:false,
               tabBarLabel:"Home",
-              headerTitleStyle:{fontFamily:"Quicksand_600SemiBold"}/*,
+              headerTitleStyle:{fontFamily:"Quicksand_600SemiBold"},
               tabBarIcon: ({focused}) => {
                 const iconimg = focused ? require('../assets/homeIcon.png') : require('../assets/homeIcon.png')
                 return(
@@ -56,7 +56,7 @@ function TabNavigator() {
                 style={{height:30,width:30}}
                 />
                 )
-              }*/
+              }
             }}
           />
           <Tab.Screen
@@ -66,16 +66,16 @@ function TabNavigator() {
               headerShown:false,
               tabBarLabel:"Booking",
               headerTitleStyle:{fontFamily:"Quicksand_600SemiBold"},
-              headerTitleAlign:'center'/*,
+              headerTitleAlign:'center',
               tabBarIcon: ({focused}) => {
-                const iconimg = focused ? require('../assets/profile-icon.png') : require('../assets/profile-icon.png')
+                const iconimg = focused ? require('../assets/bookingIcon.png') : require('../assets/bookingIcon.png')
                 return(
                         <Image 
                 source={iconimg}
                 style={{height:40,width:40}}
                 />
                 )
-              }*/
+              }
             }}
           />
           <Tab.Screen
@@ -85,35 +85,35 @@ function TabNavigator() {
               headerShown:false,
               tabBarLabel:"Live",
               headerTitleStyle:{fontFamily:"Quicksand_600SemiBold"},
-              headerTitleAlign:'center'/*,
+              headerTitleAlign:'center',
               tabBarIcon: ({focused}) => {
-                const iconimg = focused ? require('../assets/profile-icon.png') : require('../assets/profile-icon.png')
+                const iconimg = focused ? require('../assets/liveIcon.png') : require('../assets/liveIcon.png')
                 return(
                         <Image 
                 source={iconimg}
                 style={{height:40,width:40}}
                 />
                 )
-              }*/
+              }
             }}
           />
           <Tab.Screen
-            name="Account" 
+            name="Profile" 
             component={ProfileScreen}
             options={{
               headerShown:false,
               tabBarLabel:"Profile",
               headerTitleStyle:{fontFamily:"Quicksand_600SemiBold"},
-              headerTitleAlign:'center'/*,
+              headerTitleAlign:'center',
               tabBarIcon: ({focused}) => {
-                const iconimg = focused ? require('../assets/profile-icon.png') : require('../assets/profile-icon.png')
+                const iconimg = focused ? require('../assets/profileIcon.png') : require('../assets/profileIcon.png')
                 return(
                         <Image 
                 source={iconimg}
                 style={{height:40,width:40}}
                 />
                 )
-              }*/
+              }
             }}
           />
         </Tab.Navigator>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Text, SafeAreaView, ScrollView, RefreshControl } from 'react-native';
+import PostThumbnail from './PostThumbnail';
 
 function ScrollBar() {
 
@@ -29,9 +30,9 @@ function ScrollBar() {
                     />
             }>
 
-            <Text style={{textAlign: 'center'}}>Test Scroll Bar</Text>
+            <PostThumbnail/>
         
-        </ScrollView>
+            </ScrollView>
       </SafeAreaView>
 
     )

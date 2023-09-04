@@ -6,8 +6,9 @@ function HomeScreen({navigation}) {
 
     return(
         <SafeAreaView>
-            <Text style={{textAlign: 'center'}}>Home Screen</Text>
+
             <ScrollBar/>
+            
         </SafeAreaView>
     )
 }

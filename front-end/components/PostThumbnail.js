@@ -2,7 +2,7 @@ import React from 'react';
 import { Text, SafeAreaView, Image, Pressable } from 'react-native';
 import { Card, Title, Paragraph } from "react-native-paper";
 
-function PostThumbnail() {
+function PostThumbnail(props) {
 
     return(
 
@@ -12,9 +12,11 @@ function PostThumbnail() {
 
                 <Card.Content>
 
-                    <Title style={{textAlign: 'center'}}>Title</Title>
+                    <Card.Cover source={require("../assets/logo.png")} resizeMode="contain" backgroundColor="white" />
 
-                    <Paragraph style={{textAlign: 'center'}}>Para</Paragraph>
+                    <Title style={{textAlign: 'center'}}>{props.title}</Title>
+
+                    <Paragraph style={{textAlign: 'center'}}>{props.para}</Paragraph>
 
                 </Card.Content>
             

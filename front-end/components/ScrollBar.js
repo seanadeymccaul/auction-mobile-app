@@ -30,9 +30,13 @@ function ScrollBar() {
                     />
             }>
 
-            <PostThumbnail/>
+            <PostThumbnail
+            title="Example Title"
+            para="Example Para"
+            />
         
             </ScrollView>
+
       </SafeAreaView>
 
     )

@@ -13,6 +13,8 @@ import {
 
 // Import Screens
 import HomeScreen from '../screens/Home';
+import BookingScreen from '../screens/Booking';
+import LiveScreen from '../screens/Live';
 import ProfileScreen from '../screens/Profile';
 
 
@@ -51,6 +53,44 @@ function TabNavigator() {
                         <Image 
                 source={iconimg}
                 style={{height:30,width:30}}
+                />
+                )
+              }*/
+            }}
+          />
+          <Tab.Screen
+            name="Booking" 
+            component={BookingScreen}
+            options={{
+              headerShown:false,
+              tabBarLabel:"Booking",
+              headerTitleStyle:{fontFamily:"Quicksand_600SemiBold"},
+              headerTitleAlign:'center'/*,
+              tabBarIcon: ({focused}) => {
+                const iconimg = focused ? require('../assets/profile-icon.png') : require('../assets/profile-icon.png')
+                return(
+                        <Image 
+                source={iconimg}
+                style={{height:40,width:40}}
+                />
+                )
+              }*/
+            }}
+          />
+          <Tab.Screen
+            name="Live" 
+            component={LiveScreen}
+            options={{
+              headerShown:false,
+              tabBarLabel:"Live",
+              headerTitleStyle:{fontFamily:"Quicksand_600SemiBold"},
+              headerTitleAlign:'center'/*,
+              tabBarIcon: ({focused}) => {
+                const iconimg = focused ? require('../assets/profile-icon.png') : require('../assets/profile-icon.png')
+                return(
+                        <Image 
+                source={iconimg}
+                style={{height:40,width:40}}
                 />
                 )
               }*/

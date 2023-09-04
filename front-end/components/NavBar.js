@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { Image } from 'react-native';
 
 // Import Text
 import {
@@ -48,7 +49,7 @@ function TabNavigator() {
               tabBarLabel:"Home",
               headerTitleStyle:{fontFamily:"Quicksand_600SemiBold"}/*,
               tabBarIcon: ({focused}) => {
-                const iconimg = focused ? require('../assets/home-icon.png') : require('../assets/home-icon.png')
+                const iconimg = focused ? require('../assets/homeIcon.png') : require('../assets/homeIcon.png')
                 return(
                         <Image 
                 source={iconimg}

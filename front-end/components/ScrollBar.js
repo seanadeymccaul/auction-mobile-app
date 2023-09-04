@@ -17,6 +17,23 @@ function ScrollBar() {
             }, 2000);
         }, []);
 
+    // Create the list of thumbnails
+
+        // Create a dummy list
+        const dummyList = [1, 2, 3, 4, 5, 6, 7];
+        
+        // Map list to a list of thumbnails component
+        const thumbnails = dummyList.map((item) =>
+
+            <PostThumbnail
+            key={item}
+            image="../assets/logo.png"
+            title={"title " + item}
+            para={"post content " + item}
+            />
+
+        )
+
     return(
 
         <SafeAreaView>
@@ -30,11 +47,8 @@ function ScrollBar() {
                     />
             }>
 
-            <PostThumbnail
-            title="Example Title"
-            para="Example Para"
-            />
-        
+            {thumbnails}
+
             </ScrollView>
 
       </SafeAreaView>

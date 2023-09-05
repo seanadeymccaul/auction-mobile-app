@@ -17,11 +17,11 @@ function PostThumbnail(props) {
 
         <Pressable>
 
-            <Card style={{display: 'block', width: windowWidth*0.95, backgroundColor: 'beige', marginRight: 'auto', marginLeft: 'auto', marginTop: windowHeight*0.02}}>
+            <Card style={{display: 'block', width: windowWidth*0.95, backgroundColor: 'beige', marginRight: 'auto', marginLeft: 'auto', marginTop: windowHeight*0.02, paddingBottom: 10}}>
 
                 <Card.Content>
 
-                    <Title style={{textAlign: 'center', fontSize: 15}}>{props.title}</Title>
+                    <Title style={{textAlign: 'center', fontSize: 15, paddingTop: -10}}>{props.title}</Title>
 
                     <Paragraph style={{textAlign: 'justify', marginBottom: 15, fontSize: 15}}>{props.para}</Paragraph>
 

@@ -27,7 +27,7 @@ function ScrollBar() {
 
             <PostThumbnail
             key={item}
-            image="../assets/logo.png"
+            url="https://upload.wikimedia.org/wikipedia/commons/3/38/Adorable-animal-cat-20787.jpg"
             title={"title " + item}
             para={"post content " + item}
             />

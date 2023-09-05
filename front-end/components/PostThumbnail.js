@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Text, SafeAreaView, Image, Pressable, Dimensions } from 'react-native';
 import { Card, Title, Paragraph } from "react-native-paper";
 
@@ -8,9 +8,10 @@ function PostThumbnail(props) {
     const windowWidth = Dimensions.get('window').width;
     const windowHeight = Dimensions.get('window').height;
 
-    // Get Dimensions of Image
-    const imageWidth = Image.resolveAssetSource(require("../assets/end.png")).width
-    const imageHeight = Image.resolveAssetSource(require("../assets/end.png")).height
+    // Get dimensions of remote image using state
+    const [ remoteDimensions, setRemoteDimensions ] = useState([1,1])
+    Image.getSize(props.url, (width, height) => { setRemoteDimensions([width,height]) });
+
 
     return(
 
@@ -25,10 +26,10 @@ function PostThumbnail(props) {
                     <Paragraph style={{textAlign: 'justify', marginBottom: 15, fontSize: 15}}>{props.para}</Paragraph>
 
                     <Card.Cover 
-                    source={require("../assets/end.png")} 
+                    source={{uri:props.url}} 
                     resizeMode="cover" 
                     backgroundColor="white" 
-                    style={{height:imageHeight*(windowWidth*0.95/imageWidth)}}
+                    style={{height:remoteDimensions[1]*(windowWidth*0.95/remoteDimensions[0])}}
                     />
 
                 </Card.Content>

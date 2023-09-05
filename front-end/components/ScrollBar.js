@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, SafeAreaView, ScrollView, RefreshControl } from 'react-native';
+import { Text, SafeAreaView, ScrollView, RefreshControl, Image } from 'react-native';
 import PostThumbnail from './PostThumbnail';
 
 function ScrollBar() {
@@ -39,7 +39,7 @@ function ScrollBar() {
         <SafeAreaView>
 
             <ScrollView 
-                contentContainerStyle={{paddingBottom:"56%"}}
+                contentContainerStyle={{paddingBottom:25, paddingTop:5}}
                 refreshControl={
                     <RefreshControl
                         refreshing={refreshing}
@@ -49,6 +49,10 @@ function ScrollBar() {
 
             {thumbnails}
 
+            <Image style={{width:180,height:180,marginRight:'auto',marginLeft:'auto', marginTop: 25, marginBottom:20}} source={require("../assets/end.png")}></Image>
+
+            <Text style={{textAlign: 'center', fontSize: 25}}>That's all for now!</Text>
+            
             </ScrollView>
 
       </SafeAreaView>

@@ -45,7 +45,7 @@ function TabNavigator() {
             name="Home" 
             component={HomeScreen}
             options={{
-              headerShown:false,
+              headerShown:true,
               tabBarLabel:"Home",
               headerTitleStyle:{fontFamily:"Quicksand_600SemiBold"},
               tabBarIcon: ({focused}) => {
